@@ -37,4 +37,10 @@ class S04TddApplicationTests {
         assertThat(new Fibonacci().findNthElement(4)).isEqualTo(2);
     }
 
+    @Test
+    void shouldReturnTwoWhenNEqualsFour2() {
+
+        assertThat(new Fibonacci().findNthElement(5)).isEqualTo(3);
+    }
+
 }
