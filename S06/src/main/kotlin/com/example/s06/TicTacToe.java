@@ -23,6 +23,9 @@ public class TicTacToe {
         if(!board[index].isBlank()){
             throw new Exception("the cell is not empty!");
         }
+        if (x>2 || y>2){
+            throw new Exception("Input out of bound");
+        }
 
         board[index] = isPlayerXTurn ? "X" : "O";
         switchTurn();
@@ -93,4 +96,5 @@ public class TicTacToe {
 
         return false;
     }
+
 }

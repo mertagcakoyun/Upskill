@@ -151,4 +151,14 @@ class TicTacToeTest {
         assertEquals(true, game.isGameOver());
     }
 
+
+    @Test
+    void inputOutOfBoundry(){
+        try {
+            game.play(0, 4);
+        } catch (Exception e){
+            assertEquals("Input out of bound", e.getMessage());
+        }
+    }
+
 }
