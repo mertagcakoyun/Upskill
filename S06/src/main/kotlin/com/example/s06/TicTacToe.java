@@ -39,7 +39,7 @@ public class TicTacToe {
         return !cell1.isBlank() && !cell2.isBlank() && cell1.equals(cell2);
     }
 
-    public boolean isAnyRowSame(){
+    public boolean isThereAnyMatchOnAnyRow(){
         if((isCellsAreEqual(board[0], board[1])) && (isCellsAreEqual(board[1], board[2]))){
             return true;
         }
@@ -53,7 +53,7 @@ public class TicTacToe {
         return false;
     }
 
-    public boolean isAnyColumnSame(){
+    public boolean isThereAnyMatchOnAnyColumn(){
         if((isCellsAreEqual(board[0], board[3])) && (isCellsAreEqual(board[3], board[6]))){
             return true;
         }
@@ -69,7 +69,7 @@ public class TicTacToe {
         return false;
     }
 
-    private boolean isAnyDiagonalSame() {
+    private boolean isThereAnyMatchOnAnyDiagonal() {
         if((isCellsAreEqual(board[0], board[4])) && (isCellsAreEqual(board[4], board[8]))){
             return true;
         }
@@ -86,11 +86,11 @@ public class TicTacToe {
     }
 
     public boolean isGameOver() {
-        if (isAnyRowSame()) return true;
+        if (isThereAnyMatchOnAnyRow()) return true;
 
-        if (isAnyColumnSame()) return true;
+        if (isThereAnyMatchOnAnyColumn()) return true;
 
-        if (isAnyDiagonalSame()) return true;
+        if (isThereAnyMatchOnAnyDiagonal()) return true;
 
         if (!isAnyCellIsBlank()) return true;
 
