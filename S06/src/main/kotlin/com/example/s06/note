@@ -1,0 +1,21 @@
+ while (decimal >= 10) {
+            result += "X";
+            decimal = decimal - 10;
+        }
+        while (decimal >= 9) {
+            result += "IX";
+            decimal = decimal - 9;
+        }
+        while (decimal >= 5) {
+            result += "V";
+            decimal = decimal - 5;
+        }
+        while (decimal >= 4) {
+            result += "IV";
+            decimal = decimal - 4;
+        }
+        while (decimal >= 1) {
+            result += "I";
+            decimal = decimal - 1;
+        }
+        return result;
